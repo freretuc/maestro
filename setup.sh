@@ -29,6 +29,8 @@ function show_info() {
 # Check script is being run as root
 if [[ "$USER" != "root" ]]; then
   show_error "This script must be run as root"
-else
-  show_error "ok"
 fi
+
+show_notice "Updating system..."
+apt-get update && apt-get -y upgrade
+

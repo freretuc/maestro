@@ -30,5 +30,5 @@ function show_info() {
 if [[ "$USER" != "root" ]]; then
   show_error "This script must be run as root"
 else
-  show_info "ok"
+  show_error "ok"
 fi
